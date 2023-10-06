@@ -21,13 +21,14 @@ import { Input } from "../../components/ui/input";
 import { Loader2 } from "lucide-react";
 
 import { Link } from "react-router-dom";
+import Logo from "../../assets/biology 1.svg";
 
 const formSchema = z.object({
   email: z.string().min(2, {
-    message: "O e-mail deve seguir o padrão: email@example.com.",
+    message: "The email must follow the pattern: email@example.com.",
   }),
   password: z.string().min(5, {
-    message: "A senha deve possuir pelo menos 5 caracteres.",
+    message: "The password must have at least 5 characters.",
   }),
 });
 
@@ -57,10 +58,18 @@ const SignIn: React.FC = () => {
 
   return (
     <div className="h-screen w-screen flex">
-      <div className="hidden md:flex flex-col items-center justify-center w-1/2 h-full bg-main overflow-x-hidden overflow-y-hidden"></div>
+      <div className="hidden md:flex flex-col items-center justify-center w-1/2 h-full bg-main overflow-x-hidden overflow-y-hidden">
+        <h1 className="font-roboto-slab text-4xl font-semibold text-primary-red mb-0 text-white">
+          Anati Quanti
+        </h1>
+        <p className="mb-14 text-2xl text-white">
+        Fueling Progress with Quantitative Analytics
+        </p>
+        <img className="scale-[2.5] mb-10" src={Logo} alt="logo image"/>
+      </div>
       <div className="h-screen w-full md:w-1/2 bg-gray-100 flex flex-col items-center justify-center">
         <h1 className="font-roboto text-4xl font-semibold text-primary-red mb-6">
-          Faça seu login
+          Sign in to Anati Quanti
         </h1>
         <div className="flex flex-col">
           <Form {...form}>
@@ -77,7 +86,7 @@ const SignIn: React.FC = () => {
                       <div className="flex">
                         <InputIcon
                           icon={FiMail}
-                          className=" bg-red-500 border-black text-white"
+                          className="bg-main border-black text-white"
                         />
                         <Input
                           placeholder="Email"
@@ -101,11 +110,11 @@ const SignIn: React.FC = () => {
                       <div className="flex">
                         <InputIcon
                           icon={FiLock}
-                          className=" bg-red-500 border-black text-white"
+                          className=" bg-main border-black text-white"
                         />
                         <Input
                           type="password"
-                          placeholder="Senha"
+                          placeholder="Password"
                           {...field}
                           className="h-14 text-base border border-l-0 bg-gray-200 text-black border-black placeholder-black rounded-r-md"
                         />
@@ -119,7 +128,7 @@ const SignIn: React.FC = () => {
 
               <Button
                 disabled={loading}
-                className="w-96 h-14 text-base bg-red-500 hover:bg-red-700 text-white border border-red-800 transition-colors duration-300"
+                className="w-96 h-14 text-base bg-main hover:bg-green-900 text-white border border-green-800 transition-colors duration-300"
                 type="submit"
               >
                 {loading ? (
@@ -128,15 +137,15 @@ const SignIn: React.FC = () => {
                     Please wait
                   </>
                 ) : (
-                  "Entrar"
+                  "Sign In"
                 )}
               </Button>
             </form>
             <Link
               to={"/signup"}
-              className="font-roboto font-semibold text-end mt-6 text-primary-red underline "
+              className="font-roboto font-semibold text-end mt-6 text-primary-red underline text-main "
             >
-              Não tenho uma conta
+              Sign Up
             </Link>
           </Form>
         </div>
