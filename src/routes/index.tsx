@@ -7,7 +7,7 @@ import AuthRoutes from "./auth.routes";
 const Routes: React.FC = () => {
   const { user } = useAuth();
 
-  return <>{user.user ? <AppRoutes /> : <AuthRoutes />}</>;
+  return <>{ user.user ? <AuthRoutes /> : <AppRoutes />}</>;
 };
 
 export default Routes;
