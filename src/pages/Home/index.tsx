@@ -22,55 +22,62 @@ const Home: React.FC = () => {
           </div>
         </div>
       </header>
-      {/* <button className="h-16 rounded-md bg-red-500 hover:bg-red-600 py-6 px-14 text-white uppercase transition-colors duration-300">Logo</button> */}
-      <main className="w-full flex-1">
-        <div className="w-full h-full container py-6 bg-white flex flex-col items-center justify-center space-y-4">
-          <div className="flex items-center space-x-4 -mt-2">
-            <button className="h-10 w-10 rounded-md bg-main hover:bg-green-900 text-white uppercase transition-colors duration-300">
-              <span>
-                <img
-                  src={edit}
-                  alt=""
-                  className="items-center justify-center ml-2"
-                />
-              </span>
-            </button>
-            <button className="h-10 w-10 rounded-md bg-main hover:bg-green-900 text-white uppercase transition-colors duration-300">
-              +
-            </button>
-            <button className="h-10 w-10 rounded-md bg-main hover:bg-green-900 text-white uppercase transition-colors duration-300">
-              <span>
-                <img
-                  src={printer}
-                  alt=""
-                  className="items-center justify-center ml-3"
-                />
-              </span>
-            </button>
+      {/* grid min-h-screen grid-cols-[auto_1fr] justify-center gap-4 overflow-hidden p-4 */}
+      <div className="flex h-screen">
+        <aside className="ml-16 bg-slate-500 p-6">
+          <span>Logo</span>
+          <span>Footer</span>
+        </aside>
+        {/* <button className="h-16 rounded-md bg-red-500 hover:bg-red-600 py-6 px-14 text-white uppercase transition-colors duration-300">Logo</button> */}
+        <main className="flex-1 overflow-y-auto p-6 mr-60">
+          <div className="w-full h-full container py-6 bg-white flex flex-col items-center space-y-4">
+            <div className="flex items-center space-x-4 -mt-2">
+              <button className="h-10 w-10 rounded-md bg-main hover:bg-green-900 text-white uppercase transition-colors duration-300">
+                <span>
+                  <img
+                    src={edit}
+                    alt=""
+                    className="items-center justify-center ml-2"
+                  />
+                </span>
+              </button>
+              <button className="h-10 w-10 rounded-md bg-main hover:bg-green-900 text-white uppercase transition-colors duration-300">
+                +
+              </button>
+              <button className="h-10 w-10 rounded-md bg-main hover:bg-green-900 text-white uppercase transition-colors duration-300">
+                <span>
+                  <img
+                    src={printer}
+                    alt=""
+                    className="items-center justify-center ml-3"
+                  />
+                </span>
+              </button>
+            </div>
+            <div className="w-4/6 h-5/6 bg-gray-600"></div>
+            <div className="flex items-center space-x-4 -mt-2">
+              <button className="h-10 w-10 rounded-md bg-main hover:bg-green-900 text-white uppercase transition-colors duration-300">
+                <span>
+                  <img
+                    src={left}
+                    alt=""
+                    className="items-center justify-center ml-3"
+                  />
+                </span>
+              </button>
+              <button className="h-10 w-10 rounded-md bg-main hover:bg-green-900 text-white uppercase transition-colors duration-300">
+                <span>
+                  <img
+                    src={right}
+                    alt=""
+                    className="items-center justify-center ml-3"
+                  />
+                </span>
+              </button>
+            </div>
           </div>
-          <div className="w-3/6 h-5/6 bg-gray-600"></div>
-          <div className="flex items-center space-x-4 -mt-2">
-            <button className="h-10 w-10 rounded-md bg-main hover:bg-green-900 text-white uppercase transition-colors duration-300">
-              <span>
-                <img
-                  src={left}
-                  alt=""
-                  className="items-center justify-center ml-3"
-                />
-              </span>
-            </button>
-            <button className="h-10 w-10 rounded-md bg-main hover:bg-green-900 text-white uppercase transition-colors duration-300">
-              <span>
-                <img
-                  src={right}
-                  alt=""
-                  className="items-center justify-center ml-3"
-                />
-              </span>
-            </button>
-          </div>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   );
 };
