@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Logo from "../../assets/biology 1.svg";
 import { Loader2 } from "lucide-react";
 import { Button } from "../../components";
+import { Switch } from "../../components/ui/switch";
 import edit from "../../assets/edit-2.svg";
 import printer from "../../assets/printer.svg";
 import left from "../../assets/vector1.svg";
@@ -24,9 +25,37 @@ const Home: React.FC = () => {
       </header>
       {/* grid min-h-screen grid-cols-[auto_1fr] justify-center gap-4 overflow-hidden p-4 */}
       <div className="flex h-screen">
-        <aside className="ml-16 bg-slate-500 p-6">
-          <span>Logo</span>
-          <span>Footer</span>
+        <aside className="ml-14 bg-slate-500 p-6 flex flex-col justify-between">
+          <div className="flex flex-col space-y-4">
+            <button className="h-10 w-52 rounded-md bg-main hover:bg-green-900 mt-20 text-white uppercase transition-colors duration-300">
+              <span>
+                <img
+                  src={edit}
+                  alt=""
+                  className="items-center justify-center ml-2"
+                />
+              </span>
+            </button>
+            <button className="h-10 w-52 rounded-md bg-main hover:bg-green-900 text-white uppercase transition-colors duration-300">
+              <span>
+                <img
+                  src={edit}
+                  alt=""
+                  className="items-center justify-center ml-2"
+                />
+              </span>
+            </button>
+            <button className="h-10 w-52 rounded-md bg-main hover:bg-green-900 text-white uppercase transition-colors duration-300">
+              <span>
+                <img
+                  src={edit}
+                  alt=""
+                  className="items-center justify-center ml-2"
+                />
+              </span>
+            </button>
+            <Switch id="automatic-mode" className="" />
+          </div>
         </aside>
         {/* <button className="h-16 rounded-md bg-red-500 hover:bg-red-600 py-6 px-14 text-white uppercase transition-colors duration-300">Logo</button> */}
         <main className="flex-1 overflow-y-auto p-6 mr-60">
