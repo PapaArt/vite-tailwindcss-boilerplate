@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import { NotFound, SignIn,SignUp } from "../pages";
 
-const AppRoutes: React.FC = () => {
+const AuthRoutes: React.FC = () => {
   return (
     <Routes>
       <Route index path="/" element={<SignIn />} />
@@ -14,4 +14,4 @@ const AppRoutes: React.FC = () => {
   );
 };
 
-export default AppRoutes;
+export default AuthRoutes;
